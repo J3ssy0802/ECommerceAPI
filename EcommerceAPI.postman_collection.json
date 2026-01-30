@@ -1,0 +1,471 @@
+{
+  "info": {
+    "_postman_id": "3862c9fd-c5ed-4774-be6d-547b16aa8e07",
+    "name": "EcommerceAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51645460",
+    "_collection_link": "https://go.postman.co/collection/51645460-3862c9fd-c5ed-4774-be6d-547b16aa8e07?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET users (all)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/users",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Hank Gruber\",\r\n    \"address\": \"741 Sunny Dr\",\r\n    \"email\": \"hgruber@email.com\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/users",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET user (individual)",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/users/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE user by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"John Smith-Jackson\",\r\n    \"email\": \"jsmith@email.com\",\r\n    \"address\": \"123 Apple St\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/users/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE user by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/users/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "users",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE a product",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"product_name\": \"calendar\",\r\n    \"price\": \"12\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/products",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET products (all)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/products",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET product (individual)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/products/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE product by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"product_name\": \"notebook\",\r\n    \"price\": \"12\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/products/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE product by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/products/7",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE new order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user_id\": \"3\",\r\n    \"user\": \"3\",\r\n    \"order_date\": \"2026-01-28\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/orders",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ADD product to order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"product_id\": 6\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/orders/2/products",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "orders",
+            "2",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE product from order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/orders/2/products/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "orders",
+            "2",
+            "products",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET all orders for specific user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/users/3/orders",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "users",
+            "3",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET all products in an order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/orders/2/products",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "orders",
+            "2",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
